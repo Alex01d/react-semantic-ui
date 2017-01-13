@@ -389,7 +389,7 @@ module.exports = function(React, form, common) {
     return props.defaultValue || self.getModelValue();
   }
 
-  React.mixins.add('modelValueAccessor', {
+  require('react-mixin-manager').add('modelValueAccessor', {
     getModelValue: function() {
       return this.state && this.state.value || this.props.value;
     },
